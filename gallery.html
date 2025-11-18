@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - UGFit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">UG<span>Fit</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Photo Gallery</h1>
+                <p>Explore our fitness community through photos</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Photo 1 -->
+                    <div class="gallery-item">
+                        <img src="fitnessgroup.jpg" alt="Group Fitness Class" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Group Fitness</h3>
+                            <p>Energetic group workout session</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="gallery-item">
+                        <img src="Personal Trainer.png" alt="Personal Training" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Personal Training</h3>
+                            <p>One-on-one coaching session</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="gallery-item">
+                        <img src="Meditation-retreat.jpg" alt="Yoga Class" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Yoga & Mindfulness</h3>
+                            <p>Peaceful yoga session</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="gallery-item">
+                        <img src="Strength Training.jpg" alt="Strength Training" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Strength Training</h3>
+                            <p>Weight lifting area</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="gallery-item">
+                        <img src="Modern cardio equipment.jpg" alt="Cardio Zone" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Cardio Zone</h3>
+                            <p>Modern cardio equipment</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="gallery-item">
+                        <img src="Fitness challenge day.jpg" alt="Community Event" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Community Event</h3>
+                            <p>Fitness challenge day</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7 -->
+                    <div class="gallery-item">
+                        <img src="Functional area.jpg" alt="Functional Training" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Functional Training</h3>
+                            <p>Functional fitness area</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8 -->
+                    <div class="gallery-item">
+                        <img src="Stretching and recovery area.jpg" alt="Recovery Zone" class="gallery-img">
+                        <div class="image-caption">
+                            <h3>Recovery Zone</h3>
+                            <p>Stretching and recovery area</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <button class="modal-close">&times;</button>
+        <img id="modalImage" class="modal-content" src="" alt="Enlarged view">
+        <div class="modal-caption">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; MUBIRU ARNOLD. 2025 - B071 - 22232. BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

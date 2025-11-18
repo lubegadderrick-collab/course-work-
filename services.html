@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - UGFit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">UG<span>Fit</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="products.html" >Products</a></li>
+                    <li><a href="gallery.html" >Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Workout Programs</h1>
+                <p>Discover workout routines for every fitness level and goal.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Workout Filter -->
+                <div class="text-center">
+                    <button class="btn filter-btn active" data-filter="all">All Workouts</button>
+                    <button class="btn btn-secondary filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="btn btn-accent filter-btn" data-filter="intermediate">Intermediate</button>
+                    <button class="btn filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+
+                <!-- Workout Cards -->
+                <div class="card-grid">
+                    <div class="card workout-card" data-category="beginner">
+                        <div class="card-content">
+                            <h3>🏃‍♂️ Beginner Full Body</h3>
+                            <p><strong>Duration:</strong> 30 minutes</p>
+                            <p><strong>Equipment:</strong> Bodyweight only</p>
+                            <p><strong>Difficulty:</strong> ⭐☆☆☆☆</p>
+                            <ul class="list">
+                                <li>Bodyweight squats: 3 sets x 10 reps</li>
+                                <li>Push-ups (knees): 3 sets x 8 reps</li>
+                                <li>Plank: 3 sets x 30 seconds</li>
+                                <li>Jumping jacks: 3 sets x 30 seconds</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card workout-card" data-category="intermediate">
+                        <div class="card-content">
+                            <h3>💪 Strength Training</h3>
+                            <p><strong>Duration:</strong> 45 minutes</p>
+                            <p><strong>Equipment:</strong> Dumbbells</p>
+                            <p><strong>Difficulty:</strong> ⭐⭐☆☆☆</p>
+                            <ul class="list">
+                                <li>Goblet squats: 4 sets x 12 reps</li>
+                                <li>Dumbbell press: 4 sets x 10 reps</li>
+                                <li>Bent-over rows: 4 sets x 10 reps</li>
+                                <li>Lunges: 3 sets x 12 reps each</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card workout-card" data-category="advanced">
+                        <div class="card-content">
+                            <h3>🔥 HIIT Circuit</h3>
+                            <p><strong>Duration:</strong> 20 minutes</p>
+                            <p><strong>Equipment:</strong> Timer</p>
+                            <p><strong>Difficulty:</strong> ⭐⭐⭐⭐⭐</p>
+                            <ul class="list">
+                                <li>Burpees: 45s work, 15s rest</li>
+                                <li>Mountain climbers: 45s work, 15s rest</li>
+                                <li>High knees: 45s work, 15s rest</li>
+                                <li>Rest: 1 minute between rounds</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card workout-card" data-category="beginner">
+                        <div class="card-content">
+                            <h3>🧘‍♀️ Yoga Flow</h3>
+                            <p><strong>Duration:</strong> 40 minutes</p>
+                            <p><strong>Equipment:</strong> Yoga mat</p>
+                            <p><strong>Difficulty:</strong> ⭐☆☆☆☆</p>
+                            <ul class="list">
+                                <li>Sun salutations: 5 rounds</li>
+                                <li>Warrior poses sequence</li>
+                                <li>Balance poses practice</li>
+                                <li>Cool down and meditation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card workout-card" data-category="intermediate">
+                        <div class="card-content">
+                            <h3>🏊‍♂️ Cardio Blast</h3>
+                            <p><strong>Duration:</strong> 35 minutes</p>
+                            <p><strong>Equipment:</strong> Treadmill/Bike</p>
+                            <p><strong>Difficulty:</strong> ⭐⭐☆☆☆</p>
+                            <ul class="list">
+                                <li>5 min warm-up walk/light cycle</li>
+                                <li>20 min interval training</li>
+                                <li>5 min cool down</li>
+                                <li>5 min stretching</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card workout-card" data-category="advanced">
+                        <div class="card-content">
+                            <h3>💥 Power Training</h3>
+                            <p><strong>Duration:</strong> 50 minutes</p>
+                            <p><strong>Equipment:</strong> Barbell/Weights</p>
+                            <p><strong>Difficulty:</strong> ⭐⭐⭐⭐☆</p>
+                            <ul class="list">
+                                <li>Deadlifts: 4 sets x 6 reps</li>
+                                <li>Bench press: 4 sets x 8 reps</li>
+                                <li>Pull-ups: 3 sets to failure</li>
+                                <li>Shoulder press: 3 sets x 10 reps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workout Tips Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Workout Tips & Guidelines</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>💧 Stay Hydrated</h3>
+                            <p>Drink water before, during, and after your workout. Proper hydration improves performance and recovery.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>📝 Track Progress</h3>
+                            <p>Keep a workout journal to monitor your improvements and stay motivated with visible results.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🎯 Listen to Your Body</h3>
+                            <p>Pay attention to your body's signals. Rest when needed and don't push through pain.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🔥 Warm Up Properly</h3>
+                            <p>Always start with 5-10 minutes of light cardio and dynamic stretching to prevent injuries.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>💤 Rest & Recover</h3>
+                            <p>Allow 48 hours between working the same muscle groups for optimal recovery and growth.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>🎵 Stay Consistent</h3>
+                            <p>Consistency is key. Aim for 3-5 workouts per week rather than occasional intense sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Ssentamu Dauglas. 2025 - B071 - 23702. BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

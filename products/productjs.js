@@ -1,4 +1,4 @@
-// products.js 
+// products
 const productDetails = {
     'personal-training': {
         title: 'Personal Training',

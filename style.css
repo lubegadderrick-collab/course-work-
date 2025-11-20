@@ -90,8 +90,8 @@ a {
 
 .text-center {
     text-align: center;
-    margin-bottom: var(--space-xl);
 }
+
 .list {
     margin: var(--space-md) 0; 
     padding-left: var(--space-md);
@@ -101,7 +101,7 @@ a {
 .navbar {
     background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-sm) 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -113,8 +113,8 @@ a {
     align-items: center;
     max-width: var(--container-width);
     margin: 0 auto;
+    padding: 0 var(--space-md);
 }
-
 
 .logo {
     font-size: 1.8rem;
@@ -145,6 +145,16 @@ a {
     background-color: var(--light-color);
 }
 
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    padding: var(--space-xs);
+}
+
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
@@ -163,6 +173,15 @@ a {
 .btn:hover {
     background-color: var(--dark-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
 }
 
@@ -211,6 +230,11 @@ main {
     margin-right: auto;
 }
 
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .hero3 {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -224,20 +248,23 @@ main {
 
 .p1 {
     max-width: 600px; 
-    margin: 0 auto;
+    margin: 0 auto var(--space-lg);
 }
 
 .icon {
-    font-size: 2.5rem; color: var(--primary); 
+    font-size: 2.5rem; 
+    color: var(--white); 
     margin-bottom: var(--space-sm);
 }
 
 .hero-button {
-    display: flex; gap: var(--space-sm); 
+    display: flex; 
+    gap: var(--space-sm); 
     justify-content: center; 
     flex-wrap: wrap; 
     margin-top: var(--space-lg);
 }
+
 /* ===== CARDS ===== */
 .card-grid {
     display: grid;
@@ -267,6 +294,20 @@ main {
 
 .card-content {
     padding: var(--space-lg);
+}
+
+.card-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: var(--space-sm) 0;
+    text-align: center;
 }
 
 /* ===== FORMS ===== */
@@ -301,6 +342,15 @@ main {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+select.form-control {
+    cursor: pointer;
 }
 
 /* ===== GALLERY STYLES ===== */
@@ -348,51 +398,90 @@ main {
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 2000;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    background-color: var(--white);
+    margin: 2% auto;
+    padding: 2rem;
     border-radius: var(--radius-lg);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    overflow-y: auto;
 }
 
-.modal-close {
+.close-modal {
     position: absolute;
-    top: var(--space-lg);
-    right: var(--space-lg);
-    color: var(--white);
-    font-size: 2rem;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
+    color: #999;
     background: none;
     border: none;
+    z-index: 2;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Gallery Modal Specific */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: var(--white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
 }
 
 .modal-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.8);
-    color: var(--white);
-    padding: var(--space-md);
     text-align: center;
+    padding: var(--space-md);
+    color: var(--white);
 }
 
 /* ===== FILTER BUTTONS ===== */
 .filter-btn {
     margin: 0 var(--space-xs);
+    background-color: var(--gray);
+    color: var(--text-color);
 }
 
 .filter-btn.active {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Workout card filtering */
+.workout-card {
+    display: block;
+}
+
+.workout-card.hidden {
+    display: none;
 }
 
 /* ===== FOOTER ===== */
@@ -417,10 +506,14 @@ footer {
 .mb-2 { margin-bottom: var(--space-lg); }
 .mb-3 { margin-bottom: var(--space-xl); }
 .mb-4 { margin-bottom: var(--space-xxl); }
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
     .nav-menu {
         flex-direction: column;
         position: absolute;
@@ -431,20 +524,11 @@ footer {
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         display: none;
         padding: var(--space-md);
+        gap: var(--space-sm);
     }
 
     .nav-menu.active {
         display: flex;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--primary-color);
-        padding: var(--space-xs);
     }
 
     .hero h1 {
@@ -464,6 +548,36 @@ footer {
     .section {
         padding: var(--space-xl) 0;
     }
+
+    .containerForm {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .hero-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-button .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .hero3 {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -478,6 +592,16 @@ footer {
     .btn {
         width: 100%;
         margin-bottom: var(--space-sm);
+    }
+
+    .filter-btn {
+        width: auto;
+        margin: var(--space-xs);
+    }
+
+    .text-center .btn {
+        width: auto;
+        display: inline-block;
     }
 }
 
@@ -496,7 +620,24 @@ footer {
 
 /* Focus styles for accessibility */
 .btn:focus-visible,
-.nav-menu a:focus-visible {
+.nav-menu a:focus-visible,
+.form-control:focus-visible {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Animation for modal */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: modalSlideIn 0.3s ease;
 }

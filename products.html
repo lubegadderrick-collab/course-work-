@@ -45,7 +45,10 @@
                                 <li>Motivational support</li>
                             </ul>
                             <p class="price">From 60,000Ugx/session</p>
-                            <button class="btn" onclick="location.href='contact.html'">Book Now</button>
+                            <div class="card-buttons">
+                                <button class="btn" onclick="location.href='contact.html'">Book Now</button>
+                                <button class="btn btn-secondary" onclick="showProductDetails('personal-training')">Learn More</button>
+                            </div>
                         </div>
                     </div>
 
@@ -60,7 +63,10 @@
                                 <li>Strength Training</li>
                             </ul>
                             <p class="price">From 15,000Ugx/class</p>
-                            <button class="btn" onclick="location.href='contact.html'">Join Class</button>
+                            <div class="card-buttons">
+                                <button class="btn" onclick="location.href='contact.html'">Join Class</button>
+                                <button class="btn btn-secondary" onclick="showProductDetails('group-classes')">Learn More</button>
+                            </div>
                         </div>
                     </div>
 
@@ -75,7 +81,10 @@
                                 <li>Recipe guides</li>
                             </ul>
                             <p class="price">From 99,000Ugx/month</p>
-                            <button class="btn" onclick="location.href='contact.html'">Get Started</button>
+                            <div class="card-buttons">
+                                <button class="btn" onclick="location.href='contact.html'">Get Started</button>
+                                <button class="btn btn-secondary" onclick="showProductDetails('nutrition-coaching')">Learn More</button>
+                            </div>
                         </div>
                     </div>
 
@@ -90,7 +99,10 @@
                                 <li>Community support</li>
                             </ul>
                             <p class="price">From 49,000Ugx/month</p>
-                            <button class="btn" onclick="location.href='contact.html'">Sign Up</button>
+                            <div class="card-buttons">
+                                <button class="btn" onclick="location.href='contact.html'">Sign Up</button>
+                                <button class="btn btn-secondary" onclick="showProductDetails('online-coaching')">Learn More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,11 +110,22 @@
         </section>
     </main>
 
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <p>&copy; Agotre Stephen. 2024 - B071 - 21799. BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

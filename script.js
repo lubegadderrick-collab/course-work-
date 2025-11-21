@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const modalDescription = document.getElementById('modalDescription');
         const modalClose = document.querySelector('.modal-close');
 
-        // Add click event to all gallery items
+        // click event to all gallery items
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', function() {
                 const img = this.querySelector('.gallery-img');
@@ -287,7 +287,7 @@ const productDetails = {
     }
 };
 
-// Global functions for product modals
+// functions for product modals
 function showProductDetails(productId) {
     const product = productDetails[productId];
     if (!product) return;
